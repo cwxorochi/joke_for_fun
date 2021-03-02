@@ -7,8 +7,8 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="joke_app"
-        android:icon="@mipmap/ic_launcher">
+        android:label="Joke for Fun"
+        android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
@@ -43,5 +43,9 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+  
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
 </manifest>

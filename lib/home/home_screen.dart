@@ -27,15 +27,16 @@ class _HomeScreenState extends State<HomeScreen> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Joke for Fun'),
+        title: Center(
+          child: const Text('Joke for Fun'),
+        ),
       ),
       body: FutureBuilder(
         future: joke,
         builder: (context, snapshot) {
           if (snapshot.hasError) {
-            print(snapshot.error);
             return Center(
-              child: Text('Opps!'),
+              child: Text(snapshot.error),
             );
           } else if (!snapshot.hasData) {
             return const Center(
